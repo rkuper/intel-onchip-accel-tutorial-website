@@ -1,0 +1,383 @@
+:root {
+  --nord0:  #2e3440;
+  --nord1:  #3b4252;
+  --nord2:  #434c5e;
+  --nord3:  #4c566a;
+  --nord4:  #d8dee9;
+  --nord5:  #e5e9f0;
+  --nord6:  #eceff4;
+  --nord7:  #8fbcbb;
+  --nord8:  #88c0d0;
+  --nord9:  #81a1c1;
+  --nord10: #5e81ac;
+  --nord11: #bf616a;
+  --nord12: #d08770;
+  --nord13: #ebcb8b;
+  --nord14: #a3be8c;
+  --nord15: #b48ead;
+
+  --nord-extended-5: #505b72;
+  --nord-extended-6: #5b6780;
+  --nord-extended-7: #6d7991;
+  --nord-extended-8: #768199;
+
+  --white0:        var(--nord4);
+  --white1:        var(--nord5);
+  --white2:        var(--nord6);
+
+  --lighter-blue:  #698eb9;
+
+  --light-cyan:    var(--nord7);
+  --cyan:          var(--nord8);
+  --light-blue:    var(--nord9);
+  --blue:          var(--nord10);
+  --red:           var(--nord11);
+  --orange:        var(--nord12);
+  --yellow:        var(--nord13);
+  --green:         var(--nord14);
+  --purple:        var(--nord15);
+  --pink:          var(--nord15);
+}
+
+
+
+
+
+/*                                  */
+/*                                  */
+/*      General/Navbar Section      */
+/*                                  */
+/*                                  */
+
+.main-bar-name {
+  color: #eceff4;
+  font-size: 23px;
+  padding-top: 1px;
+}
+
+.main-bar-name:hover {
+  color: #eceff4;
+}
+
+.navbar {
+  background-color: #3b4252;
+}
+
+.nav-link {
+  color: #d8dee9;
+  /* font-weight: bold; */
+  font-size: 16px;
+}
+
+.col-title {
+  text-align: center;
+  color: #d8dee9;
+  margin-bottom: 35px;
+}
+
+.navbar-toggler-icon {
+  background-color: #d8dee9;
+}
+
+.icon-bar {
+  background-color: #d8dee9;
+}
+
+/* Custom font color for all text */
+p {
+  color: var(--white0);
+  font-size: 18px;
+}
+
+b {
+  color: var(--cyan);
+}
+
+.outline-li {
+  margin-left: 2%;
+  color: var(--white0);
+  padding: 6px;
+  /* font-weight: bold; */
+  font-size: 18px;
+}
+
+.outline-ol {
+  color: var(--white0);
+  padding: 14px;
+  padding-top: 12px;
+  font-size: 18px;
+}
+
+.head-li {
+  margin: auto;
+  padding-top: 20px;
+  font-size: 32px;
+}
+
+/* Separating line for each about section */
+.separator {
+  width: 100%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border: 1px solid #434c5e;
+  color: #434c5e;
+}
+
+/* Create better color background for button */
+.navbar-toggler {
+  background-color: #434c5e
+}
+
+/* Underline the navbar headers */
+.nav-item > a {
+  position: relative;
+  color: #eceff4;
+  text-decoration: none;
+  padding-top: 10px;
+}
+
+.nav-item > a:hover {
+  color: #eceff4;
+}
+
+.nav-item > a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #eceff4;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-item > a:hover::before {
+  visibility: visible;
+  transform: scaleX(0.9);
+  color: #eceff4;
+}
+
+/* Center images */
+.full-center {
+  display: table-cell;
+  margin: auto;
+  height: 200px;
+  text-align: center;
+  width: 10000px;
+  vertical-align: middle;
+}
+
+ .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Allow overlay for cards */
+.overlay {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  bottom: 0;
+  background: rgba(50, 50, 50, 0.1) !important;
+  width: 100%;
+  height: 100%;
+  transition: .35s ease;
+  color: #d8dee9;
+  font-size: 16px;
+  margin: auto;
+  text-align: center;
+  z-index: 2;
+}
+
+.underlay {
+  transition: .35s ease;
+  filter: blur(0px);
+  z-index: 1;
+}
+
+.overlay-button {
+  position: absolute;
+  top: 4%;
+  right: 6%;
+  border-radius: 16px;
+  height: 16px;
+  width: 16px;
+  opacity: 0.6;
+  z-index: 2;
+}
+
+.overlay-button:hover {
+  opacity: 1;
+}
+
+h1 {
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+
+
+
+/*                         */
+/*                         */
+/*    Overview Section     */
+/*                         */
+/*                         */
+.pic {
+  border-radius: 16px;
+  border: solid 6px #3b4252;
+}
+
+.title {
+  color: #d8dee9;
+  font-size: 65px;
+  font-weight: bold;
+}
+
+.location {
+  color: #d8dee9;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.date {
+  color: #d8dee9;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.abstract, .details, .target-audience,
+.outline, .organizer, .link {
+  width: 90%;
+  color: #d8dee9;
+  margin: auto auto;
+  text-align: left;
+}
+
+.organizer-name {
+  font-weight: bold;
+  color: var(--cyan);
+}
+
+.organizer-affiliation {
+  font-weight: bold;
+  color: var(--light-cyan);
+}
+
+.important-acronyms {
+  font-weight: bold;
+  color: var(--cyan);
+}
+
+.application {
+  color: var(--cyan);
+}
+
+.operation, .utility {
+  color: var(--yellow);
+  font-family: monospace;
+  font-size: 17px;
+  padding: 1px 4px;
+  background-color: var(--nord1);
+  border-radius: 8px;
+}
+
+li div {
+  text-align: right;
+  padding-right: 10px;
+}
+
+li div span {
+  float: left;
+}
+
+a {
+  font-size: 18px;
+  color: var(--blue)
+}
+
+a:hover {
+  color: var(--light-blue);
+}
+
+
+
+
+
+/*                                 */
+/*                                 */
+/*      Publications Section       */
+/*                                 */
+/*                                 */
+
+.year {
+
+}
+
+.publication-title {
+  font-size: 18px;
+  color: #d8dee9;
+  line-height: 16px;
+}
+
+.publication-people {
+  font-size: 15px;
+  color: #9fa2a8;
+  line-height: 20px;
+}
+
+.publication-conference-date {
+  font-size: 15px;
+  color: #9fa2a8;
+  line-height: 14px;
+}
+
+
+
+
+
+/*                           */
+/*                           */
+/*      Contact Section      */
+/*                           */
+/*                           */
+
+.contact-block {
+  display: table-cell;
+  margin: 0px auto 25px auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.contact-button {
+  background-color: #3b4252;
+  border-radius: 6%;
+  border: none;
+  transition: 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #434c5e;
+  border: none;
+  outline: none;
+}
+
+.contact-button:active {
+  background-color: #4c566a;
+  border: none;
+  outline: none;
+}
+
+
+
+/*                  */
+/*                  */
+/*      DEBUG       */
+/*                  */
+/*                  */
+.border-debug {
+  border: solid white 1px;
+}
