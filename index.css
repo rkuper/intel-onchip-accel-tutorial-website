@@ -274,6 +274,12 @@ h1 {
 
 .application {
   color: var(--cyan);
+  font-weight: bold;
+}
+
+.workload {
+  color: var(--cyan);
+  font-weight: bold;
 }
 
 .operation, .utility {
