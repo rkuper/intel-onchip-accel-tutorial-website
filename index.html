@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="Intel DSA, DSA, DMA, Accelerator, ISCA, ISCA Tutorial, 2023, Intel, Accelerator">
-  <meta name="description" content="Intel DSA ISCA 2023 Tutorial">
+  <meta name="description" content="Intel On-chip Accelerators ISCA 2023 Tutorial">
   <meta name="author" content="Reese Kuper">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -23,7 +23,7 @@
 <body style="background-color:#2e3440">
   <nav class="navbar navbar-expand-sm fixed-top shadow" style="padding: 0px auto !important;">
     <a class="navbar-brand no-hover pull-left main-bar-name" href="#" id="toTopName">
-      <img src="assets/general/icon.png" class="icon"> &nbsp Intel DSA ISCA Tutorial
+      <img src="assets/general/icon.png" class="icon"> &nbsp Intel On-chip Accelerators ISCA Tutorial
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#collapsibleNavbar">
@@ -63,10 +63,10 @@
           <div class="row">
             <div class="col">
               <div style="text-align: center;">
-                <img class="pic shadow" src="assets/front/dsa-hw-overview.png" height="auto" width="95%">
+                <img class="pic shadow" src="assets/front/cpu_acc.jpg" height="auto" width="95%">
                 <br>
                 <br>
-                <p class="title">Intel Data Streaming Accelerator (Intel DSA): Architecture, Features, Performance, and Use Cases</p>
+                <p class="title">On-chip Accelerators in 4th Gen Intel® Xeon® Scalable Processors: Features, Performance, Use Cases, and Future!</p>
 				      	<br>
 				      	<br>
                 <p class="location">[Placeholder] - Orlando, FL</p>
@@ -87,9 +87,13 @@
         <div class="container" style="margin-top: 40px;">
           <div class="row">
             <div class="col">
-							<p class="abstract"> With the demise of Dennard scaling, modern CPUs began to integrate more accelerators into a chip, aiming to increase compute and memory throughput for a wide range of applications. One such accelerator is the Intel® Data Streaming Accelerator (<span class="important-acronyms">Intel DSA</span>) introduced in Intel® 4th Generation Xeon® Scalable CPUs (<span class="important-acronyms">Sapphire Rapids</span>). Intel DSA primarily targets to accelerate memory copy operations that have been supported by its predecessor, Crystal Beach DMA (CBDMA), but now supports a much wider range of memory-side operations; such as <span class="operation">CRC calculations</span>, <span class="operation">data integrity field (DIF) creation/management</span>, and <span class="operation">cache flush</span>. Intel DSA frees cores from doing such simple but repetitive operations, allowing them to leverage their precious cycles for performing more complex and latency-sensitive operations.</p>
+							<p class="abstract"> Workloads are evolving — and so is computer architecture. Traditionally, adding more cores to your CPU or choosing a higher-frequency CPU would improve workload performance and efficiency, but these techniques alone can no longer guarantee the same benefits they achieved in the past. Modern workloads place increased demands on compute, network and storage resources. In response, a growing trend exists to deploy power-efficient accelerators to offload specialized functions and reserve compute cores for general-purpose tasks. Offloading specialized tasks to <span class="workload">AI, security, HPC, networking, analytics and storage</span> accelerators can result in faster time to results and power savings.</p>
               <br>
-							<p class="abstract"> This tutorial provides an overview of the latest features supported by Intel DSA and deep-dives into its versatility. The throughput and energy efficiency benefits of Intel DSA will be demonstrated through hands-on exercises that enable attendees to configure their own DSA instances via a command-line interface and asynchronously offload some monotonous memory-side tasks while running complex and latency-sensitive tasks on the CPU cores. We also highlight various real-world use cases that could benefit from Intel DSA, including <span class="workload">ML</span>, <span class="workload">HPC</span>, <span class="workload">cloud</span>, and <span class="workload">networking</span> workloads. Specifically, we may cover Intel DSA Transparent Offload (DTO) library to enable application transparent use of Intel DSA, <span class="application">framework to accelerate ML/HPC workloads</span>, <span class="application">DPDK-based VirtIO</span>, <span class="application">SPDK-based NVMe-oF</span>, a <span class="application">cloud data caching service</span>, and others — and guide attendees to set up such experiments and explore the unique features of this state-of-the-art, performant, and flexible on-chip accelerator device.</p>
+
+              <p class="abstract">As a result, <span class="workload">Intel has integrated the broadest set of built-in accelerators in 4th Gen Intel® Xeon® Scalable processors</span> to boost performance, reduce latency and increase power efficiency. Intel Xeon Scalable processors with Intel® Accelerator Engines can help your business solve today’s most rigorous workload challenges across cloud, networking and enterprise deployments.</p>
+              <br>
+							<!-- <p class="abstract"> This tutorial provides an overview of the latest features supported by Intel DSA and deep-dives into its versatility. The throughput and energy efficiency benefits of Intel DSA will be demonstrated through hands-on exercises that enable attendees to configure their own DSA instances via a command-line interface and asynchronously offload some monotonous memory-side tasks while running complex and latency-sensitive tasks on the CPU cores. We also highlight various real-world use cases that could benefit from Intel DSA, including <span class="workload">ML</span>, <span class="workload">HPC</span>, <span class="workload">cloud</span>, and <span class="workload">networking</span> workloads. Specifically, we may cover Intel DSA Transparent Offload (DTO) library to enable application transparent use of Intel DSA, <span class="application">framework to accelerate ML/HPC workloads</span>, <span class="application">DPDK-based VirtIO</span>, <span class="application">SPDK-based NVMe-oF</span>, a <span class="application">cloud data caching service</span>, and others — and guide attendees to set up such experiments and explore the unique features of this state-of-the-art, performant, and flexible on-chip accelerator device.</p> -->
+							<p class="abstract"> This tutorial provides an overview of the latest built-in accelerators -- <span class="workload">Data Streaming Accelerator (DSA), In-memory Analytics Accelerator (IAA), QuickAssist Technology (QAT), and Dynamic Load Balancer (DLB) </span> -- and their rich functionalities supported by Intel 4th Gen Xeon Scalable Processors. With several flexible programming models and software libraries, these accelerators have been proven to be beneficial to a wide range of data center infrastructures and applications. In addition, the hands-on labs of this tutorial will take Intel DSA as an example to provide the attendees with the basic knowledge of how to configure, invoke, and make the most out of these on-chip accelerators with both microbenchmarks and real applications.</p>
             </div>
           </div>
         </div>
