@@ -37,6 +37,24 @@
   --green:         var(--nord14);
   --purple:        var(--nord15);
   --pink:          var(--nord15);
+
+
+  --nord-dark-0:     #2e3440;
+  --nord-dark-1:     #3b4252;
+  --nord-dark-2:     #434c5e;
+  --nord-dark-3:     #4c566a;
+  --nord-light-0:    #d8dee9;
+  --nord-light-1:    #e5e9f0;
+  --nord-light-2:    #eceff4;
+  --nord-green-cyan: #8fbcbb;
+  --nord-cyan:       #88c0d0;
+  --nord-light-blue: #81a1c1;
+  --nord-blue:       #5e81ac;
+  --nord-red:        #bf616a;
+  --nord-orange:     #d08770;
+  --nord-yellow:     #ebcb8b;
+  --nord-green:      #a3be8c;
+  --nord-purple:     #b48ead;
 }
 
 
@@ -64,23 +82,23 @@
 }
 
 .nav-link {
-  color: #d8dee9;
+  color: var(--nord-light-0);
   /* font-weight: bold; */
   font-size: 16px;
 }
 
 .col-title {
   text-align: center;
-  color: #d8dee9;
+  color: var(--nord-light-0);
   margin-bottom: 35px;
 }
 
 .navbar-toggler-icon {
-  background-color: #d8dee9;
+  background-color: var(--nord-light-0);
 }
 
 .icon-bar {
-  background-color: #d8dee9;
+  background-color: var(--nord-light-0);
 }
 
 /* Custom font color for all text */
@@ -89,29 +107,29 @@ p {
   font-size: 18px;
 }
 
-b {
-  color: var(--cyan);
-}
+/* b { */
+/*   color: var(--cyan); */
+/* } */
 
 .outline-li {
-  margin-left: 2%;
+  margin-left: 1%;
   color: var(--white0);
   padding: 6px;
   /* font-weight: bold; */
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
 .outline-ol {
   color: var(--white0);
   padding: 14px;
   padding-top: 12px;
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 .head-li {
   margin: auto;
-  padding-top: 20px;
-  font-size: 32px;
+  /* padding-top: 20px; */
+  font-size: 1.5rem;
 }
 
 /* Separating line for each about section */
@@ -186,7 +204,7 @@ b {
   width: 100%;
   height: 100%;
   transition: .35s ease;
-  color: #d8dee9;
+  color: var(--nord-light-0);
   font-size: 16px;
   margin: auto;
   text-align: center;
@@ -203,7 +221,8 @@ b {
   position: absolute;
   top: 4%;
   right: 6%;
-  border-radius: 16px;
+  /* border-radius: 16px; */
+  border-radius: 00%;
   height: 16px;
   width: 16px;
   opacity: 0.6;
@@ -227,24 +246,24 @@ h1 {
 /*                         */
 /*                         */
 .pic {
-  border-radius: 16px;
-  border: solid 6px #3b4252;
+  border-radius: 0%;
+  border: solid 0.4rem #3b4252;
 }
 
 .title {
-  color: #d8dee9;
+  color: var(--nord-light-0);
   font-size: 50px;
   font-weight: bold;
 }
 
 .location {
-  color: #d8dee9;
+  color: var(--nord-light-0);
   font-size: 32px;
   font-weight: normal;
 }
 
 .date {
-  color: #d8dee9;
+  color: var(--nord-light-0);
   font-size: 20px;
   font-weight: normal;
 }
@@ -252,7 +271,7 @@ h1 {
 .abstract, .details, .target-audience,
 .outline, .organizer, .link {
   width: 90%;
-  color: #d8dee9;
+  color: var(--nord-light-0);
   margin: auto auto;
   text-align: left;
 }
@@ -284,11 +303,11 @@ h1 {
 
 .operation, .utility {
   color: var(--yellow);
-  font-family: monospace;
-  font-size: 17px;
-  padding: 1px 4px;
-  background-color: var(--nord1);
-  border-radius: 8px;
+  /* font-family: monospace; */
+  font-size: 1rem;
+  /* padding: 1px 4px; */
+  /* background-color: var(--nord1); */
+  /* border-radius: 8px; */
 }
 
 li div {
@@ -313,68 +332,152 @@ a:hover {
 
 
 
-/*                                 */
-/*                                 */
-/*      Publications Section       */
-/*                                 */
-/*                                 */
+/*                               */
+/*                               */
+/*        Details Section        */
+/*                               */
+/*                               */
 
-.year {
+/* Accel wrappers */
+.accel-box {
+  width: 475;
+  padding-right: 0px;
+  padding-left: 0px;
 
-}
-
-.publication-title {
-  font-size: 18px;
-  color: #d8dee9;
-  line-height: 16px;
-}
-
-.publication-people {
-  font-size: 15px;
-  color: #9fa2a8;
-  line-height: 20px;
-}
-
-.publication-conference-date {
-  font-size: 15px;
-  color: #9fa2a8;
-  line-height: 14px;
-}
-
-
-
-
-
-/*                           */
-/*                           */
-/*      Contact Section      */
-/*                           */
-/*                           */
-
-.contact-block {
   display: table-cell;
-  margin: 0px auto 25px auto;
+  margin: 0px auto 20px auto;
+  margin-top: 3%;
   text-align: center;
   vertical-align: middle;
 }
 
-.contact-button {
-  background-color: #3b4252;
-  border-radius: 6%;
-  border: none;
-  transition: 0.3s;
+.accel-overlay-info {
+  color: var(--nord-light-0);
+  margin: auto 5%;
+  text-align: center;
+  font-size: 1.8rem;
 }
 
-.contact-button:hover {
-  background-color: #434c5e;
+.accel-card {
+  background-color: transparent;
+  color: var(--nord-light-0);
+  width: 475px;
+  height: 350px;
+  outline: none;
+  border: none;
+}
+
+.accel-collapse-card {
+  background-color: transparent;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: var(--nord-light-0);
+  width: 475px;
+  outline: none;
+  border: none;
+}
+
+/* Button Effects */
+.accel-button {
+  border-radius: 0%;
+  background-color: var(--nord-dark-1);
+  border: none;
+  padding-left: 0px;
+  padding-right: 0px;
+  outline: none;
+  transition: 0.5s;
+}
+
+.accel-button:hover {
+  background-color: var(--nord-dark-2);
   border: none;
   outline: none;
 }
 
-.contact-button:active {
-  background-color: #4c566a;
+.accel-button:active {
+  background-color: var(--nord-dark-3);
   border: none;
   outline: none;
+}
+
+.accel-button:focus {
+  border: none;
+  outline: none;
+}
+
+/* Card info */
+.accel-name {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.accel-full-name {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Fix table border problems */
+.accel-collapse-list {
+  width: 475px;
+  border-color: var(--nord-dark-0);
+  text-align: left;
+  margin: 0px auto;
+}
+
+.accel-list {
+  padding: 10px 10px 0px 25px;
+  margin: 0px;
+  color: var(--nord-light-0);
+}
+
+.accel-bullet {
+  padding-bottom: 2%;
+  font-size: 1rem;
+}
+
+.accel-detail-card {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.accel-feature {
+  font-weight: bold;
+  color: var(--nord-cyan);
+}
+
+.general-feature-list {
+  margin: 2% 8%;
+  color: var(--nord-light-0);
+}
+
+.general-feature-item {
+  color: var(--nord-light-0);
+  padding-bottom: 2%;
+  font-size: 1rem;
+}
+
+
+
+
+
+/*                         */
+/*                         */
+/*      Links Section      */
+/*                         */
+/*                         */
+
+.use-cases {
+  color: var(--nord-light-0);
+  margin-top: 1%;
+  margin-left: 5%;
+  font-size: 1.1rem;
+}
+
+.use-case-accel {
+  margin-bottom: 1%;
 }
 
 

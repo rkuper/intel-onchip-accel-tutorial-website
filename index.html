@@ -66,11 +66,12 @@
                 <img class="pic shadow" src="assets/front/cpu_acc1.png" height="auto" width="95%">
                 <br>
                 <br>
-                <p class="title">On-chip Accelerators in 4th Gen Intel® Xeon® Scalable Processors: Features, Performance, Use Cases, and Future!</p>
+                <p class="title">On-chip Accelerators in 4th Gen Intel® Xeon® Scalable Processors: Features, Performance,
+                Use Cases, and Future!</p>
 				      	<br>
 				      	<br>
                 <p class="location">[Placeholder] - Orlando, FL</p>
-                <p class="date">Around June 20th, 2023</p>
+                <p class="date">Afternoon - June 17th, 2023</p>
               </div>
             </div>
           </div>
@@ -87,13 +88,26 @@
         <div class="container" style="margin-top: 40px;">
           <div class="row">
             <div class="col">
-							<p class="abstract"> Workloads are evolving — and so is computer architecture. Traditionally, adding more cores to your CPU or choosing a higher-frequency CPU would improve workload performance and efficiency, but these techniques alone can no longer guarantee the same benefits they achieved in the past. Modern workloads place increased demands on compute, network and storage resources. In response, a growing trend exists to deploy power-efficient accelerators to offload specialized functions and reserve compute cores for general-purpose tasks. Offloading specialized tasks to <span class="workload">AI, security, HPC, networking, analytics and storage</span> accelerators can result in faster time to results and power savings.</p>
+							<p class="abstract"> Workloads are evolving — and so is computer architecture. Traditionally, adding more cores
+              to your CPU or choosing a higher-frequency CPU would improve workload performance and efficiency, but these techniques
+              alone can no longer guarantee the same benefits they achieved in the past. Modern workloads place increased demands
+              on compute, network and storage resources. In response, a growing trend exists to deploy power-efficient accelerators
+              to offload specialized functions and reserve compute cores for general-purpose tasks. Offloading specialized tasks to
+              <span class="workload">AI, security, HPC, networking, analytics and storage</span> accelerators can result in faster
+              time to results and power savings.</p>
               <br>
-
-              <p class="abstract">As a result, <span class="workload">Intel has integrated the broadest set of built-in accelerators in 4th Gen Intel® Xeon® Scalable processors</span> to boost performance, reduce latency and increase power efficiency. Intel Xeon Scalable processors with Intel® Accelerator Engines can help your business solve today’s most rigorous workload challenges across cloud, networking and enterprise deployments.</p>
+              <p class="abstract">As a result, <span class="workload">Intel has integrated the broadest set of built-in accelerators
+              in 4th Gen Intel® Xeon® Scalable processors</span> to boost performance, reduce latency and increase power efficiency.
+              Intel Xeon Scalable processors with Intel® Accelerator Engines can help your business solve today’s most rigorous
+              workload challenges across cloud, networking and enterprise deployments.</p>
               <br>
-							<!-- <p class="abstract"> This tutorial provides an overview of the latest features supported by Intel DSA and deep-dives into its versatility. The throughput and energy efficiency benefits of Intel DSA will be demonstrated through hands-on exercises that enable attendees to configure their own DSA instances via a command-line interface and asynchronously offload some monotonous memory-side tasks while running complex and latency-sensitive tasks on the CPU cores. We also highlight various real-world use cases that could benefit from Intel DSA, including <span class="workload">ML</span>, <span class="workload">HPC</span>, <span class="workload">cloud</span>, and <span class="workload">networking</span> workloads. Specifically, we may cover Intel DSA Transparent Offload (DTO) library to enable application transparent use of Intel DSA, <span class="application">framework to accelerate ML/HPC workloads</span>, <span class="application">DPDK-based VirtIO</span>, <span class="application">SPDK-based NVMe-oF</span>, a <span class="application">cloud data caching service</span>, and others — and guide attendees to set up such experiments and explore the unique features of this state-of-the-art, performant, and flexible on-chip accelerator device.</p> -->
-							<p class="abstract"> This tutorial provides an overview of the latest built-in accelerators -- <span class="workload">Data Streaming Accelerator (DSA), In-memory Analytics Accelerator (IAA), QuickAssist Technology (QAT), and Dynamic Load Balancer (DLB) </span> -- and their rich functionalities supported by Intel 4th Gen Xeon Scalable Processors. With several flexible programming models and software libraries, these accelerators have been proven to be beneficial to a wide range of data center infrastructures and applications. In addition, the hands-on labs of this tutorial will take Intel DSA as an example to provide the attendees with the basic knowledge of how to configure, invoke, and make the most out of it with both microbenchmarks and real applications.</p>
+							<p class="abstract"> This tutorial provides an overview of the latest built-in accelerators -- <span class="workload">
+              Data Streaming Accelerator (DSA), In-memory Analytics Accelerator (IAA), QuickAssist Technology (QAT), and Dynamic
+              Load Balancer (DLB) </span> -- and their rich functionalities supported by Intel 4th Gen Xeon Scalable Processors.
+              With several flexible programming models and software libraries, these accelerators have been proven to be beneficial
+              to a wide range of data center infrastructures and applications. In addition, the hands-on labs of this tutorial will
+              take Intel DSA as an example to provide the attendees with the basic knowledge of how to configure, invoke, and make
+              the most out of it with both microbenchmarks and real applications.</p>
             </div>
           </div>
         </div>
@@ -110,11 +124,229 @@
         <div class="container" style="margin-top: 40px;">
           <div class="row">
             <div class="col">
-              <p class="details"> Intel DSA supports more operations than previous DMA engines or memory movement accelerators. Below is a table of supported operations in Intel's 4th generation Xeon processors (<span class="important-acronyms">Sapphire Rapids</span>):</p>
+          		<img class="center" src="assets/details/spr-accel-full-upscaled.webp" height="auto" width="30%">
 							<br>
-          		<img class="pic shadow center" src="assets/details/dsa-operations-table.png" height="auto" width="80%">
-
+              <p class="details"> Intel's 4th generation Xeon processors (<span class="important-acronyms">Sapphire Rapids</span>)
+              supports four primary accelerators located on-chip. These accelerators support key features to interact efficeintly
+              with cores and memory:
+              </p>
+              <ul class="general-feature-list">
+                <li class="general-feature-item"><span class="accel-feature">Intel Shared Virtual Memory (SVM)</span> -
+                SVM enables devices and cores to access shared data in software's virtual address space by IOMMU-based address
+                translation, all while avoiding memory pinning and data copying.</li>
+                <li class="general-feature-item"><span class="accel-feature">Intel Accelerator Interfacing Architecture (AiA)</span> -
+                AiA consists of a set of x86 instructions that efficiently dispatch, signal, and synchronize across CPU cores and
+                accelerators from user space.</li>
+                <li class="general-feature-item"><span class="accel-feature">Intel Scalable IO Virtualization (S-IOV)</span> -
+                S-IOV brings hardware acceleration for VM/containers and device communication, allowing for scalable sharing
+                and direct access to these accelerators across thousands of VM/containers.</li>
+              </ul>
             </div>
+          </div>
+
+          <div class="row">
+
+            <!--- Intel QAT --->
+            <div class="col-xl-6 accel-box">
+              <button type="button" data-toggle="collapse" href="#collapse-intel-qat" class="accel-button shadow">
+                <div class="card accel-card" id="underlay-intel-qat">
+                  <div class="overlay card accel-card" id="overlay-intel-qat" style="opacity: 0;">
+                    <p class="accel-overlay-info">Accelerate encryption and compression tasks</p>
+                    <p class="accel-overlay-info">Up to 400GB/s symmetric crypto, 160Gb/s compression, and 100kOps/s
+                    public key encryption</p>
+                  </div>
+                  <div class="overlay-button" id="button-intel-qat" onmouseout="off('overlay-intel-qat',
+                          'underlay-intel-qat', 'underlay', 'button-intel-qat');" onmouseover="on('overlay-intel-qat',
+                          'underlay-intel-qat', 'underlay', 'button-intel-qat');">
+                    <img src="assets/general/info.png" height="16" width="16">
+                  </div>
+                  <img class="underlay" src="assets/details/intel-qat.png" width="38%" height="42%"
+                  style="margin: auto; border-radius: 8px;">
+                  <p class="accel-name underlay">Intel QAT</p>
+                  <p class="accel-full-name underlay">Intel QuickAssist Technology</p>
+                </div>
+              </button>
+              <div class="collapse accel-collapse-list" id="collapse-intel-qat">
+                <div class="card accel-collapse-card card-body">
+                  <span class="accel-detail-card">Supported Functionality:</span>
+                  <ul class="accel-list">
+                    <li class="accel-bullet">Symmetric and Asymmetric Cryptography</li>
+                    <li class="accel-bullet">TLS1.3 elliptical curves Montgomery encryption (curve 25519 and curve 448)</li>
+                    <li class="accel-bullet">Data Compression with CnV for Deflate and LZ4/LZ4s algorithms and CnVnR for
+                    Deflate and LZ4s</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!--- Intel DLB --->
+            <div class="col-xl-6 accel-box">
+              <button type="button" data-toggle="collapse" href="#collapse-intel-dlb" class="accel-button shadow">
+                <div class="card accel-card" id="underlay-intel-dlb">
+                  <div class="overlay card accel-card" id="overlay-intel-dlb" style="opacity: 0;">
+                    <p class="accel-overlay-info">Dynamically balance consumer/producer loads through queues and arbiters</p>
+                    <p class="accel-overlay-info">Up to 100M op/s per device</p>
+                  </div>
+                  <div class="overlay-button" id="button-intel-dlb" onmouseout="off('overlay-intel-dlb',
+                          'underlay-intel-dlb', 'underlay', 'button-intel-dlb');" onmouseover="on('overlay-intel-dlb',
+                          'underlay-intel-dlb', 'underlay', 'button-intel-dlb');">
+                    <img src="assets/general/info.png" height="16" width="16">
+                  </div>
+                  <img class="underlay" src="assets/details/intel-dlb.png" width="38%" height="42%"
+                  style="margin: auto; border-radius: 8px;">
+                  <p class="accel-name underlay">Intel DLB</p>
+                  <p class="accel-full-name underlay">Intel Data Load Balancer</p>
+                </div>
+              </button>
+              <div class="collapse accel-collapse-list" id="collapse-intel-dlb">
+                <div class="card accel-collapse-card card-body">
+                  <span class="accel-detail-card">Supported Functionality:</span>
+                  <ul class="accel-list">
+                    <li class="accel-bullet">Lock-free multi-producer/multi-consumer operation</li>
+                    <li class="accel-bullet">Supports unordered, ordered, and atomic traffic types</li>
+                    <li class="accel-bullet">Multiple priorities for varying traffic types</li>
+                    <li class="accel-bullet">Various distribution schemes</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!--- Intel DSA --->
+            <div class="col-xl-6 accel-box">
+              <button type="button" data-toggle="collapse" href="#collapse-intel-dsa" class="accel-button shadow">
+                <div class="card accel-card" id="underlay-intel-dsa">
+                  <div class="overlay card accel-card" id="overlay-intel-dsa" style="opacity: 0;">
+                    <p class="accel-overlay-info">Accelerate data movement and transformation operations</p>
+                    <p class="accel-overlay-info">Up to 30GB/s per device</p>
+                  </div>
+                  <div class="overlay-button" id="button-intel-dsa" onmouseout="off('overlay-intel-dsa',
+                          'underlay-intel-dsa', 'underlay', 'button-intel-dsa');" onmouseover="on('overlay-intel-dsa',
+                          'underlay-intel-dsa', 'underlay', 'button-intel-dsa');">
+                    <img src="assets/general/info.png" height="16" width="16">
+                  </div>
+                  <img class="underlay" src="assets/details/intel-dsa.png" width="37%" height="52%"
+                  style="margin: auto; border-radius: 8px;">
+                  <p class="accel-name underlay">Intel DSA</p>
+                  <p class="accel-full-name underlay">Intel Data Streaming Accelerator</p>
+                </div>
+              </button>
+              <div class="collapse accel-collapse-list" id="collapse-intel-dsa">
+                <div class="card accel-collapse-card card-body">
+                  <span class="accel-detail-card">Supported Operations:</span>
+                  <ul class="accel-list">
+                    <li class="accel-bullet"><b>Move</b>:
+                      <span class="operation">Memory Copy</span>,
+                      <span class="operation">CRC32 Generation</span>,
+                      <span class="operation">Data Integrity Field (DIF) Operations</span>,
+                      <span class="operation">Dualcast</span>
+                    </li>
+                    <li class="accel-bullet"><b>Fill</b>:
+                      <span class="operation">Memory Fill</span>
+                    </li>
+                    <li class="accel-bullet"><b>Compare</b>:
+                      <span class="operation">Memory Compare</span>,
+                      <span class="operation">Delta Record Create</span>,
+                      <span class="operation">Delta Record Merge</span>,
+                      <span class="operation">Pattern Detect</span>
+                    </li>
+                    <li class="accel-bullet"><b>Flush</b>:
+                      <span class="operation">Cache Flush</span>
+                    </li>
+                  </ul>
+                  <span class="accel-detail-card"><br>Supported Features:</span>
+                  <ul class="accel-list">
+                    <li class="accel-bullet"><span class="accel-feature">Batch Processing</span>:
+                      <span class="feature-description">Offload a Batch descriptor that points to an array of work descriptors,
+                      where Intel DSA fetches the work descriptors from the specified virtual memory address and processes them.</span>
+                    </li>
+                    <li class="accel-bullet"><span class="accel-feature">Cache Control</span>:
+                      <span class="feature-description">Specify whether output data is allocated in the cache or is sent to
+                      memory without cache allocation.</span>
+                    </li>
+                    <li class="accel-bullet"><span class="accel-feature">Dedicated and Shared Work Queues</span>:
+                      <span class="feature-description">Shared work queues can be shared by multiple software components,
+                      while dedicated work queues are assigned to asingle software component at a time.</span>
+                    </li>
+                    <li class="accel-bullet"><span class="accel-feature">Partial Descriptor Completion</span>:
+                      <span class="feature-description"> SVM allows for software-controlled partial descriptor completion when
+                      page faults are encountered.</span>
+                    </li>
+                    <li class="accel-bullet"><span class="accel-feature">Traffic Classes</span>:
+                      <span class="feature-description">User can both adjust accelerator resources and assign groups with
+                      different traffic classes to better match the memory device bandwidth characteristics.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!--- Intel IAA --->
+            <div class="col-xl-6 accel-box">
+              <button type="button" data-toggle="collapse" href="#collapse-intel-iaa" class="accel-button shadow">
+                <div class="card accel-card" id="underlay-intel-iaa">
+                  <div class="overlay card accel-card" id="overlay-intel-iaa" style="opacity: 0;">
+                    <p class="accel-overlay-info">Accelerate encryption, compression, and data filter operations</p>
+                    <p class="accel-overlay-info">Up to 30GB/s per device</p>
+                  </div>
+                  <div class="overlay-button" id="button-intel-iaa" onmouseout="off('overlay-intel-iaa',
+                          'underlay-intel-iaa', 'underlay', 'button-intel-iaa');" onmouseover="on('overlay-intel-iaa',
+                          'underlay-intel-iaa', 'underlay', 'button-intel-iaa');">
+                    <img src="assets/general/info.png" height="16" width="16">
+                  </div>
+                  <img class="underlay" src="assets/details/intel-iaa.png" width="37%" height="52%"
+                  style="margin: auto; border-radius: 8px;">
+                  <p class="accel-name underlay">Intel IAA</p>
+                  <p class="accel-full-name underlay">Intel In-Memory Analytics Accelerator</p>
+                </div>
+              </button>
+              <div class="collapse accel-collapse-list" id="collapse-intel-iaa">
+                <div class="card accel-collapse-card card-body">
+                  <span class="accel-detail-card">Supported Operations:</span>
+                  <ul class="accel-list">
+                    <li class="accel-bullet"><b>Compress</b>:
+                      <span class="operation">Memory Compress</span>,
+                      <span class="operation">Memory Decompress</span>
+                    </li>
+                    <li class="accel-bullet"><b>Encrypt</b>:
+                      <span class="operation">Memory Encrypt</span>,
+                      <span class="operation">Memory Decrypt</span>
+                    </li>
+                    <li class="accel-bullet"><b>Filter</b>:
+                      <span class="operation">Scan</span>,
+                      <span class="operation">Extract</span>,
+                      <span class="operation">Select</span>,
+                      <span class="operation">Expand</span>
+                    </li>
+                    <li class="accel-bullet"><b>CRC</b>:
+                      <span class="operation">CRC64</span>
+                    </li>
+                    <li class="accel-bullet"><b>Memory</b>:
+                      <span class="operation">Translation Fetch</span>
+                    </li>
+                  </ul>
+                  <span class="accel-detail-card"><br>Supported Features:</span>
+                  <ul class="accel-list">
+                    <li class="accel-bullet"><span class="accel-feature">Cache Control</span>:
+                      <span class="feature-description">Specify whether output data is allocated in the cache or is sent to
+                      memory without cache allocation.</span>
+                    </li>
+                    <li class="accel-bullet"><span class="accel-feature">Compression Early Abort</span>:
+                      <span class="feature-description">An application may abord data compression early if the compression job
+                      looks likely to not achieve the desired level of compression.</span>
+                    </li>
+                    <li class="accel-bullet"><span class="accel-feature">Dedicated and Shared Work Queues</span>:
+                      <span class="feature-description">Shared work queues can be shared by multiple software components,
+                      while dedicated work queues are assigned to asingle software component at a time.</span>
+                    </li>
+                    <li class="accel-bullet"><span class="accel-feature">Traffic Classes</span>:
+                      <span class="feature-description">User can assign groups with different traffic classes to better
+                      match the memory device bandwidth characteristics.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -130,9 +362,12 @@
         <div class="container" style="margin-top: 40px;">
           <div class="row">
             <div class="col">
-							<p class="target-audience"> The primary audience for this tutorial are those who work with, or conduct research on, large-scale systems like datacenters or cloud systems. Specifically, those who develop memory-intensive applications intended to be used in aforementioned environments would find the tutorial immensely useful and may find insiration through what Intel DSA offers.</p>
-							<br>
-          		<img class="pic shadow center" src="assets/target-audience/datacenters.png" height="auto" width="80%">
+          		<img class="center" src="assets/target-audience/datacenters-empty-background-upscaled.webp" height="auto" width="80%">
+              <br>
+							<p class="target-audience"> The primary audience for this tutorial are those who work with, or conduct research on,
+              large-scale systems like datacenters or cloud systems. Specifically, those who develop memory-intensive applications
+              intended to be used in aforementioned environments would find the tutorial immensely useful and may find insiration
+              through what these on-chip accelerators offer.</p>
             </div>
           </div>
         </div>
@@ -149,33 +384,32 @@
         <div class="container" style="margin-top: 40px;">
           <div class="row">
             <div class="col">
-							<p class="outline"> This schedule, for now, is entirely tentative and so far covers only very broad topics we aim to discuss:</p>
-							<br>
+							<p class="outline"> This schedule, for now, is entirely tentative and so far covers only very broad topics
+              we aim to discuss:</p>
+              <br>
 							<ol style="margin-left: 6%;">
-							  <li class="outline-li"><p class="head-li">Introduction to Intel DSA</p>
+							  <li class="outline-li"><p class="head-li">Overview of On-Chip Accelerators</p>
 							    <ol class="outline-ul">
-							      <li class="outline-li">Goals of Intel DSA</li>
-							      <li class="outline-li">Hardware Overview</li>
-							      <li class="outline-li">Software Overview</li>
+							      <li class="outline-li">Benefits, workloads, usages, and potential</li>
+							      <li class="outline-li">Intel's position and effort</li>
 							    </ol>
 							  </li>
-							  <li class="outline-li"><p class="head-li">Basic Usage</p>
+							  <li class="outline-li"><p class="head-li">Current Xeon Scalable On-Chip Accelerators</p>
 							    <ol class="outline-ul">
-							      <li class="outline-li">Setup and Device Discovery</li>
-							      <li class="outline-li">Descriptor Preparation</li>
-							      <li class="outline-li">Operation Differences</li>
+							      <li class="outline-li">Intel QAT</li>
+							      <li class="outline-li">Intel DLB</li>
+							      <li class="outline-li">Intel DSA</li>
+							      <li class="outline-li">Intel IAA</li>
 							    </ol>
 							  </li>
-							  <li class="outline-li"><p class="head-li">Example Use Cases</p>
+							  <li class="outline-li"><p class="head-li">Future Direction</p></li>
+                <li class="outline-li"><p class="head-li">Intel DSA Live Demo</p>
 							    <ol class="outline-ul">
-							      <li class="outline-li">Problem Background</li>
-							      <li class="outline-li">Rethinking Sollution for Greater Improvements
-							    		<ol class="outline-ul">
-							      		<li class="outline-li">Convert to Batched Offloads</li>
-							      		<li class="outline-li">Asynchronous Programming Model</li>
-							    		</ol>
-										</li>
-							      <li class="outline-li">Demonstration</li>
+							      <li class="outline-li">DSA configuration via accel-config utility</li>
+							      <li class="outline-li">Guide for a simple memory copy offload</li>
+							      <li class="outline-li">Example results from dsa-perf-micros microbenchmark</li>
+							      <li class="outline-li">Advanced usage through batching and asynchronous use</li>
+							      <li class="outline-li">Real application demonstration</li>
 							    </ol>
 							  </li>
 							</ul>
@@ -196,20 +430,45 @@
           <div class="row">
             <div class="col">
 
-							<p class="organizer"> <span class="organizer-name">Yifan Yuan</span> (<span class="organizer-affiliation">Intel</span>) - He is a research scientist at Intel Labs. His research interest is computer architecture and systems, with a focus on emerging networking hardware and system software for modern data center. He has published multiple papers in top-tier architecture and systems conferences, as well as four US patents. Yifan Yuan received his PhD in computer engineering from University of Illinois, Urbana-Champaign.</p>
+							<p class="organizer"> <span class="organizer-name">Yifan Yuan</span> (<span class="organizer-affiliation">Intel</span>) -
+              He is a research scientist at Intel Labs. His research interest is computer architecture and systems, with a focus on
+              emerging networking hardware and system software for modern data center. He has published multiple papers in top-tier
+              architecture and systems conferences, as well as four US patents. Yifan Yuan received his PhD in computer engineering
+              from University of Illinois, Urbana-Champaign.</p>
 							<br>
-							<p class="organizer"> <span class="organizer-name">Jiayu Hu</span> (<span class="organizer-affiliation">Intel</span>) - She is a Software Network Engineer for Intel with six years of experience working on Data Plane Development Kit and open source communities. Jiayu specializes in optimizing Networked Systems via Intel architecture technologies</p>
+							<p class="organizer"> <span class="organizer-name">Jiayu Hu</span> (<span class="organizer-affiliation">Intel</span>) -
+              She is a Software Network Engineer for Intel with six years of experience working on Data Plane Development Kit and
+              open source communities. Jiayu specializes in optimizing Networked Systems via Intel architecture technologies</p>
 							<br>
-							<p class="organizer"> <span class="organizer-name">Ren Wang</span> (<span class="organizer-affiliation">Intel</span>) - She is a staff research scientist at Intel Labs. Her research interests include improving performance and reducing power for processors, platforms and distributed systems, via both software and hardware architecture optimizations. Ren received her Ph.D degree in Computer Science at UCLA.  Ren has more than 100 US and international patents, and published over 50 technical papers and book chapters.</p>
+							<p class="organizer"> <span class="organizer-name">Ren Wang</span> (<span class="organizer-affiliation">Intel</span>) -
+              She is a staff research scientist at Intel Labs. Her research interests include improving performance and reducing power
+              for processors, platforms and distributed systems, via both software and hardware architecture optimizations. Ren
+              received her Ph.D degree in Computer Science at UCLA.  Ren has more than 100 US and international patents, and published
+              over 50 technical papers and book chapters.</p>
 							<br>
-							<p class="organizer"> <span class="organizer-name">Narayan Ranganathan</span> (<span class="organizer-affiliation">Intel</span>) - He is a Principal Engineer in the Systems, Software and Architecture Lab in Intel Labs. He is responsible for architecture definition and software prototyping of current and upcoming platform features including accelerator technologies like the Data Streaming Accelerator (DSA). Narayan has been with Intel for 24+ years in a variety of roles including architecture, software and validation. He holds a Masters in Computer Engineering from Clemson University, USA.</p>
+							<p class="organizer"> <span class="organizer-name">Narayan Ranganathan</span> (<span class="organizer-affiliation">Intel</span>) -
+              He is a Principal Engineer in the Systems, Software and Architecture Lab in Intel Labs. He is responsible for architecture
+              definition and software prototyping of current and upcoming platform features including accelerator technologies like the
+              Data Streaming Accelerator (DSA). Narayan has been with Intel for 24+ years in a variety of roles including architecture,
+              software and validation. He holds a Masters in Computer Engineering from Clemson University, USA.</p>
 							<br>
-							<p class="organizer"> <span class="organizer-name">Reese Kuper</span> (<span class="organizer-affiliation">UIUC</span>) - He is a second year Ph.D. student at University of Illinois, Urbana-Champaign. He has been working at Intel as a part-time employee.</p>
+							<p class="organizer"> <span class="organizer-name">Reese Kuper</span> (<span class="organizer-affiliation">UIUC</span>) -
+              He is a second year Ph.D. student at University of Illinois, Urbana-Champaign. He has been working at Intel as a part-time
+              employee. His current research interests include energy-efficient CPU/GPU microarchitectures and memory system design.</p>
 							<br>
-							<p class="organizer"> <span class="organizer-name">Ipoom Jeong</span> (<span class="organizer-affiliation">UIUC</span>) - He is a Postdoctoral Research Associate at the University of Illinois Urbana-Champaign and a member of IEEE. He received his Ph.D. degree in electrical and electronics engineering from Yonsei University, Seoul, South Korea, in 2020. His research experience includes a Hardware Engineer in memory business at Samsung Electronics and a Research Professor at the School of Electrical and Electronic Engineering, Yonsei University. His current research interests include high-performance computer system design, energy-efficient CPU/GPU microarchitectures, and memory/storage system design.</p>
+							<p class="organizer"> <span class="organizer-name">Ipoom Jeong</span> (<span class="organizer-affiliation">UIUC</span>) -
+              He is a Postdoctoral Research Associate at the University of Illinois Urbana-Champaign and a member of IEEE. He received
+              his Ph.D. degree in electrical and electronics engineering from Yonsei University, Seoul, South Korea, in 2020. His
+              research experience includes a Hardware Engineer in memory business at Samsung Electronics and a Research Professor
+              at the School of Electrical and Electronic Engineering, Yonsei University. His current research interests include
+              high-performance computer system design, energy-efficient CPU/GPU microarchitectures, and memory/storage system design.</p>
 							<br>
-							<p class="organizer"> <span class="organizer-name">Nam Sung Kim</span> (<span class="organizer-affiliation">UIUC</span>) - He is the W.J. ‘Jerry’ Sanders III – Advanced Micro Devices, Inc. Endowed Chair Professor at the University of Illinois, Urbana-Champaign and a fellow of both ACM and IEEE. His interdisciplinary research incorporates device, circuit, architecture, and software for power-efficient computing. He is a recipient of many awards and honors including MICRO Best Paper Award, ACM/IEEE Most Influential ISCA Paper Award, and MICRO Test of Time Award. He is a hall of fame member of all three major computer architecture conferences, HPCA, MICRO, and ISCA.</p>
-							<!-- <p class="organizer"> <span class="organizer-name"></span> (<span class="organizer-affiliation"></span>) - </p> -->
+							<p class="organizer"> <span class="organizer-name">Nam Sung Kim</span> (<span class="organizer-affiliation">UIUC</span>) -
+              He is the W.J. ‘Jerry’ Sanders III – Advanced Micro Devices, Inc. Endowed Chair Professor at the University of Illinois,
+              Urbana-Champaign and a fellow of both ACM and IEEE. His interdisciplinary research incorporates device, circuit,
+              architecture, and software for power-efficient computing. He is a recipient of many awards and honors including MICRO
+              Best Paper Award, ACM/IEEE Most Influential ISCA Paper Award, and MICRO Test of Time Award. He is a hall of fame member
+              of all three major computer architecture conferences, HPCA, MICRO, and ISCA.</p>
             </div>
           </div>
         </div>
@@ -226,17 +485,71 @@
         <div class="container" style="margin-top: 40px;">
           <div class="row">
             <div class="col">
-							<p class="link">Introduction of Intel DSA: <a href="https://01.org/blogs/2019/introducing-intel-data-streaming-accelerator">intro</a></p>
+							<p class="link">Introduction and Details:
+                  <a href="https://www.intel.com/content/www/us/en/architecture-and-technology/intel-quick-assist-technology-overview.html">Intel QAT</a>,
+                  <a href="https://www.intel.com/content/www/us/en/developer/articles/technical/proof-points-of-dynamic-load-balancer-dlb.html">Intel DLB</a>,
+                  <a href="https://01.org/blogs/2019/introducing-intel-data-streaming-accelerator">Intel DSA</a>,
+                  <a href="https://www.intel.com/content/www/us/en/developer/articles/technical/intel-iaa-enabling-guide.html">Intel IAA</a>
+              </p>
 							<br>
-							<p class="link">Intel DSA specifications: <a href="https://software.intel.com/en-us/download/intel-data-streaming-accelerator-preliminary-architecture-specification">specs</a></p>
+							<p class="link">Specifications:
+                  <a href="https://cdrdv2.intel.com/v1/dl/getContent/743912">Intel QAT</a>,
+                  <a href="https://networkbuilders.intel.com/solutionslibrary/queue-management-and-load-balancing-on-intel-architecture">Intel DLB</a>,
+                <a href="https://software.intel.com/en-us/download/intel-data-streaming-accelerator-preliminary-architecture-specification">Intel DSA</a>,
+                <a href="https://www.intel.com/content/www/us/en/content-details/721858/intel-in-memory-analytics-accelerator-architecture-specification.html">Intel IAA</a>
+              </p>
 							<br>
-							<p class="link">Intel DSA kernel driver: <a href="https://github.com/intel/idxd-driver">idxd-driver</a></p>
+							<p class="link">User Guides:
+                  <a href="https://cdrdv2.intel.com/v1/dl/getContent/632506">Intel QAT</a>,
+                  <a href="https://www.intel.com/content/www/us/en/download/686372/intel-dynamic-load-balancer.html">Intel DLB</a>,
+                <a href="https://www.intel.com/content/www/us/en/content-details/759709/intel-data-streaming-accelerator-user-guide.html">Intel DSA</a>,
+                <a href="https://www.intel.com/content/www/us/en/developer/articles/technical/intel-iaa-enabling-guide.html#gs.wz18e6">Intel IAA</a>
+              </p>
 							<br>
-							<p class="link">Intel DSA user utlity (<span class="utility">accel-config</span>): <a href="https://github.com/intel/idxd-config">idxd-config</a></p>
+							<p class="link">Drivers:
+                <a href="https://www.intel.com/content/www/us/en/download/765501/intel-quickassist-technology-driver-for-linux-hw-version-2-0.html?">Intel QAT</a>,
+                <a href="https://www.intel.com/content/www/us/en/download/686372/intel-dynamic-load-balancer.html">Intel DLB</a>,
+                <a href="https://github.com/intel/idxd-driver">Intel DSA</a>,
+                <a href="https://github.com/intel/idxd-driver">Intel IAA</a>
+              </p>
 							<br>
-							<p class="link">Intel DSA microbenchmarks: <a href="https://github.com/intel/dsa-perf-micros">dsa-perf-micros</a></p>
+							<p class="link">Libraries and Utilities:
+                <a href="https://github.com/intel/QATzip">QATZip</a>,
+                <a href="https://github.com/intel/qatlib">qatlib</a>,
+                <a href="https://github.com/intel/QAT_Engine">QAT OpenSSL Acceleration</a>,
+                <a href="https://github.com/intel/qatlib">accel-config</a>,
+                <a href="">Intel DSA Transparent Offload (DTO)</a>
+              </p>
 							<br>
-							<p class="link">Intel DSA Transparent Offload library: <a href="">DTO</a></p>
+							<p class="link">Microbenchmarks:
+                <a href="https://github.com/intel/dsa-perf-micros">dsa-perf-micros</a>
+              </p>
+							<br>
+							<p class="link">Example Use Cases:
+              </p>
+              <!-- </br> -->
+              <ul class="use-cases">
+                <li class="use-case-accel">Intel QAT -
+                  <a href="https://www.intel.com/content/www/us/en/developer/articles/guide/nginx-https-with-qat-tuning-guide.html">Nginx HTTPs Tuning</a>,
+                  <a href="https://www.intel.com/content/www/us/en/developer/articles/technical/envoy-tls-acceleration-with-quickassist-technology.html">Envoy Transport Layer Security</a>,
+                  <a href="https://www.intel.com/content/www/us/en/content-details/751640/intel-qat-engine-for-openssl-accelerating-openssl-from-appliance-to-public-cloud-technology-guide.html">OpenSSL</a>,
+                  <a href="https://www.intel.com/content/dam/www/public/us/en/documents/solution-briefs/accelerating-hadoop-applications-brief.pdf">Hadoop Application Acceleration</a>
+                </li>
+                <li class="use-case-accel">Intel DLB -
+                  <a href="https://networkbuilders.intel.com/solutionslibrary/intel-dynamic-load-balancer-intel-dlb-high-precision-network-rate-limiting-with-intel-dlb-technology-guide">Network Rate Limiting</a>,
+                  <a href="https://networkbuilders.intel.com/solutionslibrary/intel-dynamic-load-balancer-intel-dlb-accelerating-elephant-flow-technology-guide">Elephant Flow</a>,
+                  <a href="https://networkbuilders.intel.com/solutionslibrary/intel-dynamic-load-balancer-intel-dlb-scaling-of-ipsec-workloads-technology-guide">Scaling IPsec Workloads</a>
+                </li>
+                <li class="use-case-accel">Intel DSA -
+                  <a href="https://networkbuilders.intel.com/solutionslibrary/intel-data-streaming-accelerator-packet-copy-offload-dpdk-technology-guide">DPDK Packet Fowarding</a>,
+                  <a href="https://networkbuilders.intel.com/solutionslibrary/fd-io-vpp-accelerate-the-host-stack-with-4th-gen-intel-xeon-scalable-processor-technology-guide">FD.io VPP Host Stack</a>,
+                  <a href="https://networkbuilders.intel.com/solutionslibrary/optimized-real-time-video-transport-using-intel-data-streaming-accelerator">Real-Time Video Transport</a>
+                </li>
+                <li class="use-case-accel">Intel IAA -
+                  <a href="https://www.intel.com/content/www/us/en/developer/articles/guide/clickhouse-iaa-iavx512-4th-gen-xeon-scalable.html">Tuning ClickHouse</a>,
+                  <a href="https://www.intel.com/content/www/us/en/developer/articles/guide/rocksdb-compression-decompression-iaa-4th-gen-xeon.html">Tuning RocksDB</a>
+                </li>
+              </ul>
 							<br>
 							<br>
 							<br>
