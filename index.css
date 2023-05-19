@@ -320,12 +320,16 @@ li div span {
 }
 
 a {
-  font-size: 18px;
-  color: var(--blue)
+  color: var(--nord-blue)
 }
 
 a:hover {
-  color: var(--light-blue);
+  color: var(--nord-cyan);
+  text-decoration: none;
+}
+
+.ref-link {
+  font-size: 1.2rem;
 }
 
 
@@ -478,6 +482,12 @@ a:hover {
 
 .use-case-accel {
   margin-bottom: 1%;
+}
+
+.site-author {
+  margin: 5% none !important;
+  padding-left: 1rem;
+  font-size: 1rem;
 }
 
 
