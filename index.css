@@ -69,7 +69,7 @@
 
 .main-bar-name {
   color: #eceff4;
-  font-size: 23px;
+  font-size: 1.45rem;
   padding-top: 1px;
 }
 
@@ -84,7 +84,7 @@
 .nav-link {
   color: var(--nord-light-0);
   /* font-weight: bold; */
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .col-title {
