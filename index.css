@@ -320,7 +320,7 @@ li div span {
 }
 
 a {
-  color: var(--nord-blue)
+  color: var(--nord-light-blue);
 }
 
 a:hover {
