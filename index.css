@@ -59,11 +59,12 @@
   /* Lighter blue */
   /* --primary-back-alt:   #163b6e; */
   /* --secondary-back-alt: #102643; */
+  /* --tertiary-back-alt:  #0c1b32; */
 
   /* Darker blue */
   --primary-back-alt:   #102643;
   --secondary-back-alt: #163b6e;
-  --tertiary-back-alt:  #0c1b32;
+  --tertiary-back-alt:  #234d86;
 
   --primary-accent:     #00c7fd;
   --secondary-accent:   #CC94DA;
