@@ -320,7 +320,7 @@ h1 {
   font-weight: bold;
 }
 
-.workload {
+.workload, .key-word {
   color: var(--primary-accent);
   font-weight: bold;
 }
