@@ -292,7 +292,7 @@ h1 {
   font-weight: normal;
 }
 
-.abstract, .details, .target-audience,
+.abstract, .details, .publications, .target-audience,
 .outline, .organizer, .link {
   width: 90%;
   color: var(--primary-text-alt);
@@ -506,7 +506,7 @@ a:hover {
 }
 
 .publication-people {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--secondary-text-alt);
   line-height: 1.4rem;
   margin-bottom: 0.4rem;
@@ -532,6 +532,16 @@ a:hover {
   color: var(--primary-text-alt);
   line-height: 1.4rem;
   margin-bottom: 0.4rem;
+}
+
+.publication-link {
+  color: var(--primary-accent) !important;
+  font-weight: 700;
+}
+
+.publication-link:hover {
+  color: var(--secondary-accent) !important;
+  text-decoration: none !important;
 }
 
 
