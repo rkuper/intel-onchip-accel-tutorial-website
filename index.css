@@ -487,6 +487,55 @@ a:hover {
 
 
 
+/*=================================*/
+/*                                 */
+/*      Publications Section       */
+/*                                 */
+/*=================================*/
+
+.publication-block {
+  margin-bottom: 2rem;
+}
+
+.publication-title {
+  font-size: 1.1rem;
+  color: var(--primary-text-alt);
+  line-height: 1.6rem;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.publication-people {
+  font-size: 0.95rem;
+  color: var(--secondary-text-alt);
+  line-height: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.publication-conference-patent-date {
+  font-size: 0.95rem;
+  color: var(--secondary-text-alt);
+  line-height: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.selected-author {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--primary-text-alt);
+  margin-bottom: 0.4rem;
+}
+
+.conference-patent-name {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--primary-text-alt);
+  line-height: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+
+
 /*                         */
 /*                         */
 /*      Links Section      */
