@@ -1,57 +1,4 @@
 :root {
-  --nord0:  #2e3440;
-  --nord1:  #3b4252;
-  --nord2:  #434c5e;
-  --nord3:  #4c566a;
-  --nord4:  #d8dee9;
-  --nord5:  #e5e9f0;
-  --nord6:  #eceff4;
-  --nord7:  #8fbcbb;
-  --nord8:  #88c0d0;
-  --nord9:  #81a1c1;
-  --nord10: #5e81ac;
-  --nord11: #bf616a;
-  --nord12: #d08770;
-  --nord13: #ebcb8b;
-  --nord14: #a3be8c;
-  --nord15: #b48ead;
-
-  --nord-extended-5: #505b72;
-  --nord-extended-6: #5b6780;
-  --nord-extended-7: #6d7991;
-  --nord-extended-8: #768199;
-
-  --lighter-blue:  #698eb9;
-  --light-cyan:    var(--nord7);
-  --cyan:          var(--nord8);
-  --light-blue:    var(--nord9);
-  --blue:          var(--nord10);
-  --red:           var(--nord11);
-  --orange:        var(--nord12);
-  --yellow:        var(--nord13);
-  --green:         var(--nord14);
-  --purple:        var(--nord15);
-  --pink:          var(--nord15);
-
-
-  --nord-dark-0:     var(--nord0);
-  --nord-dark-1:     var(--nord1);
-  --nord-dark-2:     var(--nord2);
-  --nord-dark-3:     var(--nord3);
-  --nord-light-0:    var(--nord4);
-  --nord-light-1:    var(--nord5);
-  --nord-light-2:    var(--nord6);
-  --nord-green-cyan: var(--nord7);
-  --nord-cyan:       var(--nord8);
-  --nord-light-blue: var(--nord9);
-  --nord-blue:       var(--nord10);
-  --nord-red:        var(--nord11);
-  --nord-orange:     var(--nord12);
-  --nord-yellow:     var(--nord13);
-  --nord-green:      var(--nord14);
-  --nord-purple:     var(--nord15);
-
-
   --primary-back:   #ffffff;
   --secondary-back: #0068b5;
   --tertiary-back:  #428bca;
@@ -513,7 +460,7 @@ a:hover {
 }
 
 .publication-conference-patent-date {
-  font-size: 0.95rem;
+  font-size: 0.95rem !important;
   color: var(--secondary-text-alt);
   line-height: 1.4rem;
   margin-bottom: 0.4rem;
